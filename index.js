@@ -63,3 +63,6 @@ const calculo = () => {
 };
 
 calcular.addEventListener("click", calculo);
+peso.addEventListener("keypress", (e)=>{
+    if(e.key == 'Enter') calculo();
+})
