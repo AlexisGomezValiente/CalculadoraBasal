@@ -19,7 +19,7 @@ body{
     display: flex;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 10px 10px 30px 0 black;
+    box-shadow: 10px 10px 30px 0 rgb(49, 17, 177);
     height: 450px;
 }
 
