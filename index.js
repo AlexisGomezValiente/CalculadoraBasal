@@ -34,9 +34,11 @@ let resultado2 = document.getElementById("resultados2");
 let mayor30 = document.getElementById("mayor30");
 let op1500 = document.getElementById("1500");
 let op2000 = document.getElementById("2000");
+let error = document.getElementById("error");
 
 const calculoDetalles = (liquido) =>{
   mayor30.style = "display: none";
+
 
   let total = liquido;
   let mantenimiento = Math.round(liquido / 24);
@@ -76,10 +78,21 @@ const calculoMayor30 = (e)=>{
   calculoDetalles(liquido);
 }
 
-calcular.addEventListener("click", calculoHasta30);
+const validar = () => {
+  if(peso.value){
+    error.style = "display: none";
+    calculoHasta30();
+  }else{
+    error.style = "display: block";
+    resultado1.innerText = "";
+    resultado2.innerText = "";
+  }
+}
+
+calcular.addEventListener("click", validar);
 
 peso.addEventListener("keypress", (e) => {
-  if (e.key == "Enter") calculoHasta30();
+  if (e.key == "Enter") validar();
 });
 
 op1500.addEventListener("click", calculoMayor30);
