@@ -35,8 +35,8 @@ let mayor30 = document.getElementById("mayor30");
 let op1500 = document.getElementById("1500");
 let op2000 = document.getElementById("2000");
 
-const calculoDetalles = (peso, liquido) =>{
-  if(peso > 30) mayor30.style = "display: none";
+const calculoDetalles = (liquido) =>{
+  mayor30.style = "display: none";
 
   let total = liquido;
   let mantenimiento = Math.round(liquido / 24);
@@ -61,7 +61,7 @@ const calculoHasta30 = () => {
 
     if (pesokg == 30) liquido = 1700;
 
-    calculoDetalles(pesokg, liquido);
+    calculoDetalles(liquido);
   } else if (pesokg > 30) {
     mayor30.style = "display: block";
     resultado1.innerText = "";
@@ -73,7 +73,7 @@ const calculoMayor30 = (e)=>{
   let pesokg = Number(peso.value);
   let factor = Number(e.target.id);
   let liquido = Math.floor(((pesokg * 4 + 7) / (pesokg + 90)) * factor);
-  calculoDetalles(pesokg, liquido);
+  calculoDetalles(liquido);
 }
 
 calcular.addEventListener("click", calculoHasta30);
