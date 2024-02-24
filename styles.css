@@ -112,6 +112,10 @@ body{
 }
 
 @media (max-width: 600px) {
+    #body{
+        height: auto;
+    }
+
     #padre{
         flex-direction: column;
         width: 400px;
@@ -153,6 +157,6 @@ body{
     }
 
     #comentario h2{
-        margin: 0;
+        margin-top: 15px;
     }
 }
