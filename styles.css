@@ -110,3 +110,49 @@ body{
 #error{
     display: none;
 }
+
+@media (max-width: 600px) {
+    #padre{
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+    }
+
+    #calculadora{
+        width: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #comentario{
+        width: auto;
+        height: 210px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #comentario h2{
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    #padre{
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+    }
+
+    #calculadora{
+        width: auto;
+        border-radius: 10px 10px 0 0;
+    }
+
+    #comentario{
+        width: auto;
+        height: 210px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    #comentario h2{
+        margin: 0;
+    }
+}
