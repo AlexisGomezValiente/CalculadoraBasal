@@ -111,6 +111,11 @@ body{
     display: none;
 }
 
+#autor{
+    position: absolute;
+    bottom: 110px;
+}
+
 @media (max-width: 600px) {
     #body{
         height: auto;
