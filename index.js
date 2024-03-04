@@ -35,6 +35,8 @@ let mayor30 = document.getElementById("mayor30");
 let op1500 = document.getElementById("1500");
 let op2000 = document.getElementById("2000");
 let error = document.getElementById("error");
+let comentario = document.getElementById("comentario");
+let comentario2 = document.getElementById("comentario2");
 
 const calculoDetalles = (liquido) =>{
   mayor30.style = "display: none";
@@ -52,6 +54,9 @@ const calculoHasta30 = () => {
   let pesokg = Number(peso.value);
   let liquido = 0;
   let resto = 0;
+
+  comentario.style.display = "flex";
+  comentario2.style.display = "none";
 
   if (pesokg <= 30) {
     resto = pesokg % 10;
@@ -75,6 +80,8 @@ const calculoMayor30 = (e)=>{
   let pesokg = Number(peso.value);
   let factor = Number(e.target.id);
   let liquido = Math.floor(((pesokg * 4 + 7) / (pesokg + 90)) * factor);
+  comentario.style.display = "none";
+  comentario2.style.display = "flex";
   calculoDetalles(liquido);
 }
 

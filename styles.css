@@ -21,6 +21,7 @@ body{
     border-radius: 10px;
     box-shadow: 10px 10px 30px 0 rgb(49, 17, 177);
     height: 450px;
+    width: 800px;
 }
 
 .hijos{
@@ -91,6 +92,12 @@ body{
     margin-top: 0;
 }
 
+#comentario2 h2{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 0;
+}
+
 #mayor30{
     display: none;
 }
@@ -114,6 +121,23 @@ body{
 #autor{
     position: absolute;
     bottom: 110px;
+}
+
+#comentario h3, #comentario2 h3{
+    font-weight: bold;
+    margin: 0;
+}
+
+#comentario li{
+    font-size: 18px;
+}
+
+#comentario2{
+    display: none;
+}
+
+#comentario2 li{
+    font-size: 20px;
 }
 
 @media (max-width: 600px) {
